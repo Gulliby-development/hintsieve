@@ -1,0 +1,8 @@
+.baked/
+*.db
+.build/
+*.exe
+*.pdb
+*.lib
+*.o
+*.swiftmodule

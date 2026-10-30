@@ -8,14 +8,14 @@ import Testing
         == CliResult(
           exit: 0,
           out:
-            "usage: hintsieve COMMAND [ARGS]\n  score GUESS ANSWER\n  filter WORDS [CLUE...]\n  rank WORDS [--top N] [CLUE...]\n  split WORDS GUESS [CLUE...]\n  solve WORDS ANSWER [--first WORD] [--hard]\n  check WORDS LOG [--hard]\n",
+            "usage: hintsieve COMMAND [ARGS]\n  score GUESS ANSWER\n  filter WORDS [--count] [CLUE...]\n  rank WORDS [--top N] [CLUE...]\n  split WORDS GUESS [CLUE...]\n  solve WORDS ANSWER [--first WORD] [--hard]\n  check WORDS LOG [--hard]\n",
           err: ""))
     #expect(
       Cli.run(["-h"])
         == CliResult(
           exit: 0,
           out:
-            "usage: hintsieve COMMAND [ARGS]\n  score GUESS ANSWER\n  filter WORDS [CLUE...]\n  rank WORDS [--top N] [CLUE...]\n  split WORDS GUESS [CLUE...]\n  solve WORDS ANSWER [--first WORD] [--hard]\n  check WORDS LOG [--hard]\n",
+            "usage: hintsieve COMMAND [ARGS]\n  score GUESS ANSWER\n  filter WORDS [--count] [CLUE...]\n  rank WORDS [--top N] [CLUE...]\n  split WORDS GUESS [CLUE...]\n  solve WORDS ANSWER [--first WORD] [--hard]\n  check WORDS LOG [--hard]\n",
           err: ""))
     #expect(
       Cli.run([])
@@ -23,7 +23,7 @@ import Testing
           exit: 2,
           out: "",
           err:
-            "usage: hintsieve COMMAND [ARGS]\n  score GUESS ANSWER\n  filter WORDS [CLUE...]\n  rank WORDS [--top N] [CLUE...]\n  split WORDS GUESS [CLUE...]\n  solve WORDS ANSWER [--first WORD] [--hard]\n  check WORDS LOG [--hard]\n"
+            "usage: hintsieve COMMAND [ARGS]\n  score GUESS ANSWER\n  filter WORDS [--count] [CLUE...]\n  rank WORDS [--top N] [CLUE...]\n  split WORDS GUESS [CLUE...]\n  solve WORDS ANSWER [--first WORD] [--hard]\n  check WORDS LOG [--hard]\n"
         ))
     #expect(
       Cli.run(["frob"])

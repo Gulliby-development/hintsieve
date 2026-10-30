@@ -12,7 +12,7 @@ public struct CliResult: Equatable, Sendable {
 
 public enum Cli {
   static let usage =
-    "usage: hintsieve COMMAND [ARGS]\n  score GUESS ANSWER\n  filter WORDS [CLUE...]\n  rank WORDS [--top N] [CLUE...]\n  split WORDS GUESS [CLUE...]\n  solve WORDS ANSWER [--first WORD] [--hard]\n  check WORDS LOG [--hard]\n"
+    "usage: hintsieve COMMAND [ARGS]\n  score GUESS ANSWER\n  filter WORDS [--count] [CLUE...]\n  rank WORDS [--top N] [CLUE...]\n  split WORDS GUESS [CLUE...]\n  solve WORDS ANSWER [--first WORD] [--hard]\n  check WORDS LOG [--hard]\n"
 
   public static func run(
     _ args: [String],

@@ -41,7 +41,7 @@ The synopsis is:
 ```text
 usage: hintsieve COMMAND [ARGS]
   score GUESS ANSWER
-  filter WORDS [CLUE...]
+  filter WORDS [--count] [CLUE...]
   rank WORDS [--top N] [CLUE...]
   split WORDS GUESS [CLUE...]
   solve WORDS ANSWER [--first WORD] [--hard]
@@ -75,6 +75,16 @@ swift run hintsieve filter words.txt crane:yggbg
 ```
 
 This retains words, in their original file order, whose score against `crane` is `yggbg`; the command prints the candidate words and then `N of M`.
+
+To get only the count, for a script, add `--count`: the candidate words are left out and only the `N of M` line is printed. The exit status is the same as without the flag (1 when no candidate is left).
+
+```sh
+swift run hintsieve filter words.txt crane:yggbg --count
+```
+
+```text
+3 of 7
+```
 
 Rank possible guesses by how effectively they separate the current candidates:
 
